@@ -1,0 +1,55 @@
+http://localhost:9005/altair
+
+http://localhost:9005/graphql
+
+
+# Write your query or mutation here
+mutation {
+  createOrganization(
+    organizationRequest: {
+      name:"test1"
+      email: "test"
+      address: {
+        postalCode:"1234",
+        town:"Mbita",
+        postalAddress:"303505"
+      },
+      phone: {
+        countryCode:"+254"
+        phoneNumber: "07171717171"
+      }
+    }
+  )
+  {
+    name  
+  }
+
+  createUser(userRequest:{
+    firstName: "Broadmax"
+    middleName: "test"
+    lastName: "test User"
+    documentNumber: "ID"
+    documentType: NATIONAL_ID
+    
+    email: "test@gmail.com"
+    address: {
+      postalCode: "9090",
+      postalAddress:"190"
+    }
+    phone: {
+      phoneNumber: "0789897899"
+    }
+    organizationId: "64085f645af7fa6fb808d266"
+    role: "System Admin"
+    
+  }){
+    lastName
+    middleName
+    documentType
+    
+  }
+}
+
+git add .
+git commit -m "first commit" 
+I was able to git branch -M main
